@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "bebasNeue";
+        src: url(../fonts/BebasNeue-Regular.ttf);
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: "poppins";
+        src: url(../fonts/Poppins-Medium.ttf);
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: "montserrat";
+        src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+    }
+}
+
+@layer utilities {
+    .circle {
+        clip-path: circle(50% at 50% 50%);
+    };
+}
+
+/* <!-- info card --> */
+@layer components{
+    .my-name {
+        @apply font-mono my-4 font-bold text-2xl mx-auto text-center ;
+    }
+
+    .info-card {
+        @apply relative flex flex-col justify-center items-center mx-auto w-[90vw] h-[38rem] bg-[#C1EDF5] rounded-ss-[4rem] rounded-ee-[4rem] overflow-hidden space-y-4 md:w-[90vw] md:h-[42rem] lg:w-[90vw] lg:h-[42rem];
+    }
+
+    .info-outer-circle {
+        @apply absolute circle bg-[#00A5DF] w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40;
+    }
+
+    .info-inner-circle {
+        @apply absolute circle bg-[#166FB1] w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28;
+    }
+
+    .info-profile-pic {
+        @apply rounded-full w-52 h-52 md:w-56 md:h-56 m-auto mt-8;
+    }
+   
+    .info-introduce {
+        @apply text-center font-mono opacity-55 lg:text-2xl;
+    }
+   
+    .info-job-title {
+        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
+    }
+   
+    .info-sign {
+        @apply font-poppins text-[1rem] w-2/3 lg:w-[15rem] font-light text-center mx-auto;
+    }
+   
+    .info-btn {
+        @apply bg-[#166FB1] p-4 rounded-2xl text-white font-mono font-bold text-xs lg:text-[1rem] shadow-lg;
+    }
+
+}
+/* <!-- end of info card --> */
+
+/* <!-- strengths --> */
+@layer components{
+
+    .brands-bar {
+        @apply my-4 p-4 lg:-scale-75 lg:rotate-180 mx-auto;
+    }
+
+    .strengths-container {
+        @apply w-fit mx-auto bg-[#166FB1] rounded-lg p-4 space-y-4;
+    }
+    
+    .strengths-ul {
+        @apply flex justify-center space-x-1 md:text-3xl lg:text-4xl;
+    }
+
+    .strengths-li {
+        @apply flex flex-col justify-center items-center border border-white rounded-lg -scale-90 rotate-180 border-opacity-30 p-4;
+    }
+
+    .strengths-li-img {
+        @apply w-14 md:w-28 lg:w-40;
+    }
+}
+/* <!-- end of strengths --> */
+
+/* <!-- achievements --> */
+@layer components{
+
+    .ach-body {
+        @apply flex flex-col items-center space-y-4 mt-4 p-4;
+    }
+
+    .ach-title {
+        @apply text-center font-mono opacity-55 lg:text-2xl;
+    }
+
+    .ach-sign {
+        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
+    }
+
+    .ach-desc {
+        @apply border-s-4 border-s-[#062838] font-poppins text-sm text-[#062838] md:w-[80vw] lg:w-[80vw] text-left mx-auto ps-4 opacity-80;
+    }
+
+    .ach-btn {
+        @apply bg-[#166FB1] p-4 rounded-2xl text-white font-mono font-bold text-xs lg:text-[1.5rem] shadow-lg w-fit;
+    }
+
+    .ach-footer {
+        @apply grid grid-cols-2 lg:grid-cols-4 gap-2 p-2;
+    }
+    
+    .ach-footer-box {
+        @apply flex flex-col justify-center items-center bg-[#C1EDF5] p-5 text-center h-[11rem] border;
+    }
+    
+    .ach-box-title {
+        @apply font-mono text-[#166FB1] text-3xl font-bold;
+    }
+
+    .ach-box-desc {
+        @apply text-[#062838] font-poppins;
+    }
+}
+/* <!-- end of achievements --> */
+
+/* <!-- My impact --> */
+@layer components{
+    
+    .impact-img {
+        @apply rounded-xl mx-auto w-[90vw] lg:w-[60vw] mt-16;
+    }
+
+    .impact-container {
+        @apply flex flex-col items-center space-y-4 my-8;
+    }
+
+    .impact-title {
+        @apply text-center font-mono opacity-55 text-2xl;
+    }
+
+    .impact-sign {
+        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
+    }
+
+    .impact-desc {
+        @apply font-poppins text-[1rem] w-[90vw] font-light text-center mx-auto;
+    }
+
+    .impact-box {
+        @apply grid grid-cols-2 p-2;
+    }
+
+    .impact-box-li {
+        @apply flex flex-col space-y-2 justify-center items-center bg-[#04A5DF] p-3 text-center h-[16rem] border ;
+    }
+
+    .impact-box-title {
+        @apply font-sans text-white text-3xl font-bold;
+    }
+
+    .impact-box-desc {
+        @apply text-white font-poppins;
+    }
+}
+/* <!-- End My impact --> */
+
+/* <!-- Footer --> */
+@layer components{
+    
+    .footer {
+        @apply border-t-8 border-t-[#166FB1] bg-[#C1EDF5] py-8 text-[#166EAC] space-y-4;
+    }
+    
+    .footer-desc {
+        @apply font-poppins text-[1rem] w-[90vw] font-light text-center mx-auto;
+    }
+    
+    .footer-my-name {
+        @apply font-mono my-4 font-bold text-2xl mx-auto text-center tracking-[.7rem];
+    }
+}
+/* <!-- End Footer --> */
