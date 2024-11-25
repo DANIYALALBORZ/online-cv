@@ -26,17 +26,50 @@
 @layer utilities {
     .circle {
         clip-path: circle(50% at 50% 50%);
-    };
+    }
+
+    ;
 }
 
+/* <!-- dark/light mode --> */
+@layer components {
+
+    .mode-container {
+        @apply hidden relative md:flex items-center w-fit *:p-2 rounded-full *:rounded-full;
+    }
+
+    .mode-toggle {
+        @apply absolute rounded-full bg-blue-600/30 w-16 h-16 transition-all duration-300;
+    }
+
+    /* .dark-mode {
+        @apply absolute rounded-full bg-blue-600/30 left-0 w-16 h-16 transition-all duration-300;
+    }
+
+    .light-mode {
+        @apply absolute rounded-full bg-blue-600/30 left-0 w-16 h-16 transition-all duration-300;
+    } */
+
+    .auto-mode {
+        @apply font-montserrat font-bold ms-2;
+    }
+
+    /* 
+    .mode-toggle {
+        @apply absolute rounded-full bg-blue-600/30 left-0 w-16 h-16 transition-all duration-300;
+    } */
+}
+
+/* <!-- end of dark/light mode --> */
+
 /* <!-- info card --> */
-@layer components{
+@layer components {
     .my-name {
-        @apply font-mono my-4 font-bold text-2xl mx-auto text-center ;
+        @apply font-mono my-4 font-bold text-2xl mx-auto text-center;
     }
 
     .info-card {
-        @apply relative flex flex-col justify-center items-center mx-auto w-[90vw] h-[38rem] bg-[#C1EDF5] rounded-ss-[4rem] rounded-ee-[4rem] overflow-hidden space-y-4 md:w-[90vw] md:h-[42rem] lg:w-[90vw] lg:h-[42rem];
+        @apply relative flex flex-col justify-center items-center mt-4 mx-auto w-[90vw] h-[38rem] bg-[#C1EDF5] rounded-ss-[4rem] rounded-ee-[4rem] overflow-hidden space-y-4 md:w-[90vw] md:h-[42rem] lg:w-[90vw] lg:h-[42rem];
     }
 
     .info-outer-circle {
@@ -50,28 +83,29 @@
     .info-profile-pic {
         @apply rounded-full w-52 h-52 md:w-56 md:h-56 m-auto mt-8;
     }
-   
+
     .info-introduce {
         @apply text-center font-mono opacity-55 lg:text-2xl;
     }
-   
+
     .info-job-title {
         @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
     }
-   
+
     .info-sign {
         @apply font-poppins text-[1rem] w-2/3 lg:w-[15rem] font-light text-center mx-auto;
     }
-   
+
     .info-btn {
         @apply bg-[#166FB1] p-4 rounded-2xl text-white font-mono font-bold text-xs lg:text-[1rem] shadow-lg;
     }
 
 }
+
 /* <!-- end of info card --> */
 
 /* <!-- strengths --> */
-@layer components{
+@layer components {
 
     .brands-bar {
         @apply my-4 p-4 lg:-scale-75 lg:rotate-180 mx-auto;
@@ -80,7 +114,7 @@
     .strengths-container {
         @apply w-fit mx-auto bg-[#166FB1] rounded-lg p-4 space-y-4;
     }
-    
+
     .strengths-ul {
         @apply flex justify-center space-x-1 md:text-3xl lg:text-4xl;
     }
@@ -93,10 +127,11 @@
         @apply w-14 md:w-28 lg:w-40;
     }
 }
+
 /* <!-- end of strengths --> */
 
 /* <!-- achievements --> */
-@layer components{
+@layer components {
 
     .ach-body {
         @apply flex flex-col items-center space-y-4 mt-4 p-4;
@@ -121,11 +156,11 @@
     .ach-footer {
         @apply grid grid-cols-2 lg:grid-cols-4 gap-2 p-2;
     }
-    
+
     .ach-footer-box {
         @apply flex flex-col justify-center items-center bg-[#C1EDF5] p-5 text-center h-[11rem] border;
     }
-    
+
     .ach-box-title {
         @apply font-mono text-[#166FB1] text-3xl font-bold;
     }
@@ -134,11 +169,12 @@
         @apply text-[#062838] font-poppins;
     }
 }
+
 /* <!-- end of achievements --> */
 
 /* <!-- My impact --> */
-@layer components{
-    
+@layer components {
+
     .impact-img {
         @apply rounded-xl mx-auto w-[90vw] lg:w-[60vw] mt-16;
     }
@@ -164,7 +200,7 @@
     }
 
     .impact-box-li {
-        @apply flex flex-col space-y-2 justify-center items-center bg-[#04A5DF] p-3 text-center h-[16rem] border ;
+        @apply flex flex-col space-y-2 justify-center items-center bg-[#04A5DF] p-3 text-center h-[16rem] border;
     }
 
     .impact-box-title {
@@ -175,21 +211,23 @@
         @apply text-white font-poppins;
     }
 }
+
 /* <!-- End My impact --> */
 
 /* <!-- Footer --> */
-@layer components{
-    
+@layer components {
+
     .footer {
         @apply border-t-8 border-t-[#166FB1] bg-[#C1EDF5] py-8 text-[#166EAC] space-y-4;
     }
-    
+
     .footer-desc {
         @apply font-poppins text-[1rem] w-[90vw] font-light text-center mx-auto;
     }
-    
+
     .footer-my-name {
         @apply font-mono my-4 font-bold text-2xl mx-auto text-center tracking-[.7rem];
     }
 }
+
 /* <!-- End Footer --> */

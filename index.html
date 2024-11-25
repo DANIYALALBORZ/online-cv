@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,32 @@
     <link rel="stylesheet" href="./assets/css/output.css">
 </head>
 
-<body>
-    <h1 class="my-name">Danial Alborz</h1>
+<body class="dark:bg-[#0F172A]">
+
+    <nav
+        class="flex justify-around items-center sticky top-0 z-50 bg-[#166eb148] backdrop-blur-lg w-[95%] mx-auto rounded-es-2xl rounded-ee-2xl">
+
+        <!-- dark/light mode -->
+        <div class="mode-container">
+            <button class="light-mode">
+                <img src="./assets/img/light-mode.svg" alt="">
+            </button>
+            <button class="dark-mode">
+                <img src="./assets/img/dark-mode.svg" alt="">
+            </button>
+            <button class="auto-mode">
+                Auto
+            </button>
+            <div class="mode-toggle" style="left: 0;"></div>
+        </div>
+        <!-- end of dark/light mode -->
+
+
+        <h1 class="font-mono font-bold text-2xl ">Danial Alborz</h1>
+
+        <div class="hidden md:flex "><a href="">item1</a><a href="">item2</a><a href="">item3</a><a href="">item4</a>
+        </div>
+    </nav>
 
     <div class="info-card">
 
@@ -204,6 +228,8 @@
 
         <h2 class="footer-my-name">DANIAL ALBORZ</h2>
     </footer>
+
+    <script src="./assets/js/dark-light-mode.js"></script>
 </body>
 
 </html>
