@@ -39,37 +39,33 @@
     }
 
     .mode-toggle {
-        @apply absolute rounded-full bg-blue-600/30 w-16 h-16 transition-all duration-300;
+        @apply absolute rounded-full bg-blue-600/30 dark:bg-[#dbd9d928] w-16 h-16 transition-all duration-300;
     }
-
-    /* .dark-mode {
-        @apply absolute rounded-full bg-blue-600/30 left-0 w-16 h-16 transition-all duration-300;
-    }
-
-    .light-mode {
-        @apply absolute rounded-full bg-blue-600/30 left-0 w-16 h-16 transition-all duration-300;
-    } */
 
     .auto-mode {
         @apply font-montserrat font-bold ms-2;
     }
-
-    /* 
-    .mode-toggle {
-        @apply absolute rounded-full bg-blue-600/30 left-0 w-16 h-16 transition-all duration-300;
-    } */
 }
 
 /* <!-- end of dark/light mode --> */
 
-/* <!-- info card --> */
+/* <!-- navbar --> */
 @layer components {
-    .my-name {
-        @apply font-mono my-4 font-bold text-2xl mx-auto text-center;
+    .nav {
+        @apply flex justify-around items-center sticky top-0 z-50 bg-[#166eb148] backdrop-blur-lg w-[95%] mx-auto rounded-es-2xl rounded-ee-2xl;
     }
 
+    .my-name {
+        @apply font-mono my-4 font-bold text-2xl mx-auto text-center dark:text-[#dbd9d9];
+    }
+}
+/* <!-- end of navbar --> */
+
+/* <!-- info card --> */
+@layer components {
+
     .info-card {
-        @apply relative flex flex-col justify-center items-center mt-4 mx-auto w-[90vw] h-[38rem] bg-[#C1EDF5] rounded-ss-[4rem] rounded-ee-[4rem] overflow-hidden space-y-4 md:w-[90vw] md:h-[42rem] lg:w-[90vw] lg:h-[42rem];
+        @apply relative flex flex-col justify-center items-center mt-4 mx-auto w-[90vw] h-[38rem] bg-[#C1EDF5] dark:bg-[#1659b1] rounded-ss-[4rem] rounded-ee-[4rem] overflow-hidden space-y-4 md:w-[90vw] md:h-[42rem] lg:w-[90vw] lg:h-[42rem];
     }
 
     .info-outer-circle {
@@ -85,15 +81,15 @@
     }
 
     .info-introduce {
-        @apply text-center font-mono opacity-55 lg:text-2xl;
+        @apply text-center font-mono opacity-55 lg:text-2xl dark:text-[#dbd9d9];
     }
 
     .info-job-title {
-        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
+        @apply text-5xl text-[#103D5B] dark:text-[#dbd9d9] lg:text-7xl text-center font-bebasNeue;
     }
 
     .info-sign {
-        @apply font-poppins text-[1rem] w-2/3 lg:w-[15rem] font-light text-center mx-auto;
+        @apply font-poppins text-[1rem] dark:text-white w-2/3 lg:w-[15rem] font-light text-center mx-auto;
     }
 
     .info-btn {
@@ -138,15 +134,15 @@
     }
 
     .ach-title {
-        @apply text-center font-mono opacity-55 lg:text-2xl;
+        @apply text-center  dark:text-[#dbd9d979] font-mono opacity-55 lg:text-2xl;
     }
 
     .ach-sign {
-        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
+        @apply text-5xl lg:text-7xl text-center  dark:text-white font-bebasNeue text-[#103D5B];
     }
 
     .ach-desc {
-        @apply border-s-4 border-s-[#062838] font-poppins text-sm text-[#062838] md:w-[80vw] lg:w-[80vw] text-left mx-auto ps-4 opacity-80;
+        @apply border-s-4 border-s-[#062838] font-poppins text-sm text-[#062838] dark:text-[#dbd9d979] md:w-[80vw] lg:w-[80vw] text-left mx-auto ps-4 opacity-80;
     }
 
     .ach-btn {
@@ -158,15 +154,15 @@
     }
 
     .ach-footer-box {
-        @apply flex flex-col justify-center items-center bg-[#C1EDF5] p-5 text-center h-[11rem] border;
+        @apply flex flex-col justify-center items-center bg-[#C1EDF5] dark:bg-[#166FB1] p-5 text-center h-[11rem];
     }
 
     .ach-box-title {
-        @apply font-mono text-[#166FB1] text-3xl font-bold;
+        @apply font-mono text-[#166FB1] dark:text-[#C1EDF5] text-3xl font-bold;
     }
 
     .ach-box-desc {
-        @apply text-[#062838] font-poppins;
+        @apply text-[#062838] dark:text-[#c1edf5af] font-poppins;
     }
 }
 
@@ -184,15 +180,15 @@
     }
 
     .impact-title {
-        @apply text-center font-mono opacity-55 text-2xl;
+        @apply text-center font-mono opacity-55 text-2xl dark:text-[#dbd9d9];
     }
 
     .impact-sign {
-        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B];
+        @apply text-5xl lg:text-7xl text-center font-bebasNeue text-[#103D5B] dark:text-white;
     }
 
     .impact-desc {
-        @apply font-poppins text-[1rem] w-[90vw] font-light text-center mx-auto;
+        @apply font-poppins text-[1rem] dark:text-[#dbd9d9] w-[90vw] font-light text-center mx-auto;
     }
 
     .impact-box {
@@ -200,15 +196,15 @@
     }
 
     .impact-box-li {
-        @apply flex flex-col space-y-2 justify-center items-center bg-[#04A5DF] p-3 text-center h-[16rem] border;
+        @apply flex flex-col space-y-2 justify-center items-center bg-[#04A5DF] dark:bg-[#166FB1] p-3 text-center h-[16rem];
     }
 
     .impact-box-title {
-        @apply font-sans text-white text-3xl font-bold;
+        @apply font-sans text-white dark:text-[#C1EDF5] text-3xl font-bold;
     }
 
     .impact-box-desc {
-        @apply text-white font-poppins;
+        @apply text-white dark:text-[#c1edf59c] font-poppins;
     }
 }
 
