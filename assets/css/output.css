@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -634,8 +634,6 @@ video {
 .my-name {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1.5rem;
@@ -1397,6 +1395,10 @@ video {
   text-decoration-line: underline;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1488,10 +1490,6 @@ video {
 
 .dark\:dark\:bg-\[\#166eb148\]:where(.dark, .dark *):where(.dark, .dark *) {
   background-color: #166eb148;
-}
-
-.dark\:text-\[\#dbd9d979\]:where(.dark, .dark *) {
-  color: #dbd9d979;
 }
 
 .dark\:text-\[\#dbd9d9\]:where(.dark, .dark *) {
